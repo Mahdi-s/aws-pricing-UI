@@ -1,0 +1,55 @@
+html{
+	width:100%;
+}
+body{
+    background-color: snow !important;
+}
+header{
+	width:100%;
+    padding-left:15%;
+    padding-right: 15%;
+    height: 8vh;
+    min-height: 50px;
+    background-color: gainsboro;
+    color:white;
+    position:sticky;
+    border-radius: 4px;
+}
+footer{
+    bottom: 0;
+    border-top:3px solid darkgray;
+    margin-left:20%;
+    margin-right: 20%;
+    width:60%;
+    text-align: center;
+}
+#nav{
+    z-index: 100;
+	width:13%;
+    max-width:250px;
+    min-width: 150px;
+    margin:0;
+    border-top: 8vh solid snow;
+    top:0;
+    padding-bottom: 0;
+    padding-left: 0;
+    position:fixed;
+    height:100vh;
+    background-color:gainsboro;
+    border-radius:4px;
+}
+#nav ul{
+    padding-left:0;
+}
+#nav ul li{
+    display:block;
+}
+#content{
+    margin-left:15%;
+    margin-right:15%;
+    width:70%;
+}
+#content table{
+    background-color: white !important;
+    width:100%;
+}
