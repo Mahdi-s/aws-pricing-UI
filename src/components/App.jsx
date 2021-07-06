@@ -1,20 +1,15 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import SideBar from"./SideBar";
-//import { BrowserRouter as Router } from 'react-router-dom';
+import Table from "../components/Table";
+import StackChart from "../components/StackChart";
+import NavBar from "../components/NavBar";
 
 function App() {
     return (
-    //<Router>
-
     <div>
-        <Header />
-        <SideBar />
-        <Footer />
+        <NavBar />
+        <StackChart />
+        <Table />
     </div>
-
-    //</Router>
     )
 }
 
