@@ -6,6 +6,8 @@
   "main": "src/index.js",
   "dependencies": {
     "bootstrap": "^5.0.2",
+    "g": "^2.0.1",
+    "purgecss": "^4.0.3",
     "react": "16.8.6",
     "react-bootstrap": "^1.6.1",
     "react-dom": "16.8.6",
