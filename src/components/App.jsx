@@ -7,10 +7,19 @@ import NavBar from "../components/NavBar";
 function App() {
     return (
     <div>
+
         <NavBar />
+
+        <div class = 'flex-container'>
+
         <StackChart />
         <PieChart />
+
+        </div>
+        <div class = 'table-container '>
         <Table />
+        </div>
+
     </div>
     )
 }

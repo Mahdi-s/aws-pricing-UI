@@ -16,15 +16,15 @@ function NavBar() {
         <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <button type="button" class="nav-link btn btn-outline-light m-1">Home <span class="sr-only">(current)</span> </button>
+                    <button type="button" class="nav-link btn btn-outline-light m-1">Cost Estimation <span class="sr-only">(current)</span> </button>
                     {/* <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> */}
                 </li>
                 <li class="nav-item">
-                <button type="button" class="nav-link btn btn-outline-light m-1">Pricing Calculator <span class="sr-only">(current)</span> </button>
+                <button type="button" class="nav-link btn btn-outline-light m-1">Health Monitor <span class="sr-only">(current)</span> </button>
                     {/* <a class="nav-link" href="#">Price Calculator</a> */}
                 </li>
                 <li class="nav-item">
-                <button type="button" class="nav-link btn btn-outline-light m-1">Stats <span class="sr-only">(current)</span> </button>
+                <button type="button" class="nav-link btn btn-outline-light m-1">Export <span class="sr-only">(current)</span> </button>
                 </li>
                 {/* <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

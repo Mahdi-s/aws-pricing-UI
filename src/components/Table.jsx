@@ -14,6 +14,7 @@ function Table() {
                     <th scope="col">Cost</th>
                     <th scope="col">Cores</th>
                     <th scope="col">Clockspeed</th>
+                    <th scope="col">Include/Exclude</th>
                 </tr>
             </thead>
             <tbody >
@@ -25,6 +26,11 @@ function Table() {
                     <td>0</td>
                     <td>40</td>
                     <td>2.4</td>
+                    <td>
+                    <div class="radio">
+                     <label><input type="radio" id='regular' name="optradio"></input></label>
+                    </div>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
@@ -34,6 +40,11 @@ function Table() {
                     <td>0</td>
                     <td>2</td>
                     <td>2.8</td>
+                    <td>
+                    <div class="radio">
+                     <label><input type="radio" id='regular' name="optradio"></input></label>
+                    </div>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
@@ -43,6 +54,11 @@ function Table() {
                     <td>7.29</td>
                     <td>96</td>
                     <td>N/A</td>
+                    <td>
+                    <div class="radio">
+                     <label><input type="radio" id='regular' name="optradio"></input></label>
+                    </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
