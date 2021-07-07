@@ -4,7 +4,7 @@ function Table() {
 
     return ( 
     <div id='table'>
-        <table class='table table-striped table-hover'>
+        <table class='border table table-striped table-hover'>
             <thead class='table-dark'>
                 <tr>
                     <th scope="col">#</th>
