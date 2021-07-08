@@ -1,0 +1,23 @@
+@import "../../modules/@progress/kendo-theme-default/scss/calendar/_theme.scss";
+
+@include exports("calendar/theme/material") {
+
+    .k-calendar {
+
+        .k-state-focused .k-link {
+            @include fill(
+                $calendar-cell-hover-text,
+                $calendar-cell-hover-bg,
+                $calendar-cell-hover-border
+            );
+        }
+        .k-state-selected.k-state-focused .k-link {
+            @include fill(
+                $calendar-cell-selected-text,
+                try-tint($calendar-cell-selected-bg),
+                $calendar-cell-selected-border
+            );
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+@import "../../modules/@progress/kendo-theme-default/scss/textbox/_layout.scss";
+
+@include exports("textbox/layout/material") {
+
+    // Textbox
+    .k-textbox {
+        border-width: $input-border-width 0;
+        border-top-color: transparent !important; // sass-lint:disable-line no-important
+
+        &:disabled {
+            border-style: dashed;
+        }
+    }
+
+}

@@ -1,0 +1,298 @@
+@include exports("datetime/theme") {
+
+    // Common
+    .k-datepicker,
+    .k-timepicker,
+    .k-datetimepicker,
+    .k-dateinput {
+        @extend .k-text-selection !optional;
+
+        .k-select {
+            @include fill(
+                $datetime-select-text,
+                $datetime-select-bg,
+                $datetime-select-border,
+                $datetime-select-gradient
+            );
+        }
+
+        .k-i-warning {
+            color: $error;
+        }
+    }
+
+
+    .k-datepicker .k-picker-wrap,
+    .k-timepicker .k-picker-wrap,
+    .k-datetimepicker .k-picker-wrap,
+    .k-dateinput .k-dateinput-wrap {
+        @include fill(
+            $datetime-text,
+            $datetime-bg,
+            $datetime-border
+        );
+
+        // Hovered state
+        &:hover,
+        &.k-state-hover {
+            @include fill(
+                $datetime-hovered-text,
+                $datetime-hovered-bg,
+                $datetime-hovered-border
+            );
+        }
+
+        // Selected state
+        &.k-state-focused,
+        &.k-state-active {
+            @include fill(
+                $datetime-focused-text,
+                $datetime-focused-bg,
+                $datetime-focused-border
+            );
+            @include box-shadow($datetime-focused-shadow);
+        }
+    }
+
+    .k-datepicker,
+    .k-timepicker {
+
+        .k-select:hover,
+        .k-select.k-state-hover {
+            @include fill(
+                $datetime-select-hovered-text,
+                $datetime-select-hovered-bg,
+                $datetime-select-hovered-border,
+                $datetime-select-hovered-gradient
+            );
+        }
+    }
+
+
+    .k-dateinput,
+    .k-datetimepicker {
+
+        .k-link:hover,
+        .k-link.k-state-hover {
+            @include fill(
+                $datetime-select-hovered-text,
+                $datetime-select-hovered-bg,
+                $datetime-select-hovered-border,
+                $datetime-select-hovered-gradient
+            );
+        }
+
+        .k-link:active,
+        .k-link.k-state-active,
+        .k-link.k-state-selected {
+            @include fill(
+                $datetime-select-pressed-text,
+                $datetime-select-pressed-bg,
+                $datetime-select-pressed-border,
+                $datetime-select-pressed-gradient
+            );
+        }
+    }
+
+
+    // Timepicker
+    .k-timepicker {}
+
+
+    // Timepicker header
+    .k-time-header {
+
+        .k-time-now {
+            color: $link-text;
+            background: transparent;
+
+            &:hover,
+            &:focus {
+                color: $link-hover-text;
+            }
+        }
+    }
+
+
+    // Timepicker content
+    .k-time-list-wrapper {
+
+        .k-title {
+            color: $time-list-title-text;
+        }
+
+        &.k-state-focused {
+            .k-title {
+                color: $time-list-title-focus-text;
+            }
+
+            &::before,
+            &::after {
+                background-color: $time-list-focused-bg;
+            }
+        }
+    }
+
+    .k-time-list {
+        &::before,
+        &::after {
+            $shadow-size: 3em;
+            box-shadow: 0 0 $shadow-size ($shadow-size / 2) $popup-bg;
+        }
+
+        .k-item:hover {
+            color: $primary;
+        }
+    }
+
+    .k-time-container {
+        background: transparent;
+    }
+
+    .k-time-highlight {
+        @include fill(
+            $bg: $time-list-highlight-bg,
+            $border: $time-list-highlight-border
+        );
+    }
+
+    .k-datetime-container {
+        .k-date-tab {
+
+            .k-datetime-buttongroup,
+            .k-datetime-selector {
+                background-color: $component-bg;
+            }
+        }
+    }
+
+    .k-datepicker,
+    .k-datetimepicker,
+    .k-timepicker {
+        .k-picker-wrap {
+            // Invalid
+            &.k-invalid,
+            &.k-state-invalid {
+                border-color: $invalid-border;
+
+                &:focus,
+                &.k-state-focused {
+                    @include box-shadow($invalid-shadow);
+                }
+            }
+        }
+        // Invalid
+        &.k-state-invalid,
+        &.ng-invalid.ng-touched,
+        &.ng-invalid.ng-dirty {
+            .k-picker-wrap {
+                border-color: $invalid-border;
+
+                &:focus,
+                &.k-state-focused {
+                    @include box-shadow($invalid-shadow);
+                }
+            }
+        }
+    }
+    .k-dateinput {
+        .k-dateinput-wrap {
+            // Invalid
+            &.k-invalid,
+            &.k-state-invalid {
+                border-color: $invalid-border;
+
+                &:focus,
+                &.k-state-focused {
+                    @include box-shadow($invalid-shadow);
+                }
+            }
+        }
+        // Invalid
+        &.k-state-invalid,
+        &.ng-invalid.ng-touched,
+        &.ng-invalid.ng-dirty {
+            .k-dateinput-wrap {
+                border-color: $invalid-border;
+
+                &:focus,
+                &.k-state-focused {
+                    @include box-shadow($invalid-shadow);
+                }
+            }
+        }
+    }
+
+    //Universal rendering
+    .k-datepicker {
+        &.k-state-hover {
+            .k-picker-wrap {
+                @include fill(
+                    $datetime-hovered-text,
+                    $datetime-hovered-bg,
+                    $datetime-hovered-border
+                );
+            }
+        }
+
+        &.k-state-focus {
+            .k-picker-wrap {
+                @include fill(
+                    $datetime-focused-text,
+                    $datetime-focused-bg,
+                    $datetime-focused-border
+                );
+                @include box-shadow($datetime-focused-shadow);
+            }
+        }
+
+        &.k-invalid {
+            .k-picker-wrap {
+                border-color: $invalid-border;
+            }
+        }
+
+        &.k-invalid.k-state-focus {
+            .k-picker-wrap {
+                @include box-shadow($invalid-shadow);
+            }
+        }
+    }
+
+    .k-dateinput,
+    .k-daterangepicker {
+        &.k-state-hover {
+            .k-dateinput-wrap {
+                @include fill(
+                    $datetime-hovered-text,
+                    $datetime-hovered-bg,
+                    $datetime-hovered-border
+                );
+            }
+        }
+
+        &.k-state-focus {
+            .k-dateinput-wrap {
+                @include fill(
+                    $datetime-focused-text,
+                    $datetime-focused-bg,
+                    $datetime-focused-border
+                );
+                @include box-shadow($datetime-focused-shadow);
+            }
+        }
+
+        &.k-invalid {
+            .k-dateinput-wrap {
+                border-color: $invalid-border;
+            }
+        }
+
+        &.k-invalid.k-state-focus {
+            .k-dateinput-wrap {
+                @include box-shadow($invalid-shadow);
+            }
+        }
+    }
+
+}

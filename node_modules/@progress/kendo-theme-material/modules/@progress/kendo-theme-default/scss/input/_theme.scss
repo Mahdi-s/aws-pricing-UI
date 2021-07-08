@@ -1,0 +1,28 @@
+@include exports("input/theme") {
+
+    .k-input-prefix,
+    .k-input-suffix {
+
+        > .k-icon {
+            color: $input-icon-text;
+            opacity: $input-icon-opacity;
+        }
+
+        .k-clear-value {
+            color: $clear-button-text;
+        }
+
+        > .k-clear-value {
+            &.k-state-focused::after,
+            &:focus::after {
+                background-color: $input-clear-button-focused-background;
+                opacity: $input-clear-button-focused-opacity;
+            }
+        }
+    }
+
+    .k-input-separator {
+        border-color: $input-separator-color;
+        opacity: $input-separator-opacity;
+    }
+}

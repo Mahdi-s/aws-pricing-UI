@@ -1,0 +1,176 @@
+
+@include exports("multiselect/layout") {
+
+    // Base
+    .k-multiselect {
+        @include border-radius( $input-border-radius );
+        width: $multiselect-width;
+        border-width: 0;
+        box-sizing: border-box;
+        outline: 0;
+        background: none;
+        font-family: $input-font-family;
+        font-size: $input-font-size;
+        line-height: $input-line-height;
+        text-align: left;
+        white-space: nowrap;
+        display: inline-flex;
+        vertical-align: middle;
+        position: relative;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: $rgba-transparent;
+
+        .k-loading-hidden {
+            visibility: hidden;
+        }
+
+        .k-multiselect-wrap {
+            @include use-background-clip();
+            @include border-radius( $input-border-radius );
+            padding: 0 $input-icon-width 0 0;
+            width: 100%;
+            border-width: 1px;
+            border-style: solid;
+            box-sizing: border-box;
+            position: relative;
+            transition: all .1s ease; // sass-lint:disable-block no-transition-all
+            cursor: text;
+            outline: 0;
+
+            // Input
+            .k-input {
+                float: left;
+            }
+
+            // Height placeholder
+            &::before {
+                content: "";
+                width: 0;
+                height: $input-inner-calc-height;
+                float: left;
+            }
+
+            // Token list
+            ul {
+                vertical-align: top;
+            }
+            li {
+                @include use-background-clip();
+
+                &.k-button {
+                    float: left;
+                }
+                .k-icon {
+                    cursor: pointer;
+                }
+            }
+
+
+            // Token
+            .k-button {
+                min-height: calc( #{$form-line-height-em} + #{$button-padding-y-sm} + 2px );
+                padding: ($button-padding-y-sm / 2) ($button-padding-x / 2);
+                margin: $padding-y-sm 0 0 $padding-y-sm;
+                cursor: default;
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                gap: $icon-spacing;
+                line-height: inherit;
+                white-space: normal;
+
+                .k-select {
+                    display: flex;
+                    cursor: pointer;
+                    align-self: stretch;
+                }
+
+                &:last-child {
+                    margin-bottom: $padding-y-sm;
+                }
+            }
+
+            .k-searchbar {
+                // search bar must be floated to align after any selected tags
+                // (or align below them, if space is not available)
+                float: left;
+                width: auto;
+
+                .k-input {
+                    padding-right: 0;
+                }
+            }
+
+            .k-i-loading {
+                width: $input-icon-width;
+                height: $input-icon-height;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            // Clear value
+            .k-clear-value {
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            &:hover,
+            &.k-state-hover,
+            &.k-state-focused {
+                .k-clear-value {
+                    visibility: visible;
+                }
+            }
+        }
+
+
+        &.k-state-hover,
+        &.k-state-focused,
+        &.k-state-focus {
+            > .k-multiselect-wrap {
+                .k-clear-value {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &[dir="rtl"],
+        .k-rtl & {
+            text-align: right;
+
+            .k-multiselect-wrap {
+                padding-left: $input-icon-width;
+                padding-right: 0;
+
+                &::before,
+                li.k-button,
+                .k-input {
+                    float: right;
+                }
+
+                .k-searchbar {
+                    float: right;
+
+                    .k-input {
+                        padding-left: 0;
+                        padding-right: $input-padding-x;
+                    }
+                }
+
+                .k-button {
+                    width: auto;
+                    margin-right: $padding-y-sm;
+                    margin-left: 0;
+                }
+            }
+
+            .k-clear-value,
+            .k-i-loading {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+}

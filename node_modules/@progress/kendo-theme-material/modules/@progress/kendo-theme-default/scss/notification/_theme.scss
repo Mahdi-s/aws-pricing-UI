@@ -1,0 +1,29 @@
+@include exports("notification/theme") {
+
+    // Theme
+    .k-notification {
+        @extend .k-text-selection !optional;
+        @include fill(
+            $notification-text,
+            $notification-bg,
+            $notification-border
+        );
+    }
+    .k-notification-wrap {
+        > .k-i-close {
+            color: inherit;
+        }
+    }
+    .k-notification-group .k-notification {
+        box-shadow: $notification-shadow;
+    }
+
+    @each $theme, $props in $notification-themes {
+        .k-notification-#{$theme} {
+            border-color: map-get( $props, border );
+            color: map-get( $props, color );
+            background-color: map-get( $props, bg );
+        }
+    }
+
+}

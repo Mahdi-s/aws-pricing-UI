@@ -1,0 +1,43 @@
+// Multiselect
+$multiselect-width: 100% !default;
+
+$multiselect-bg: $input-bg !default;
+$multiselect-text: $input-text !default;
+$multiselect-border: $input-border !default;
+
+$multiselect-hovered-bg: $input-hovered-bg !default;
+$multiselect-hovered-text: $input-hovered-text !default;
+$multiselect-hovered-border: $input-hovered-border !default;
+
+$multiselect-focused-bg: $input-focused-bg !default;
+$multiselect-focused-text: $input-focused-text !default;
+$multiselect-focused-border: $input-focused-border !default;
+$multiselect-focused-shadow: $input-focused-shadow !default;
+
+$multiselect-button-focused-bg: $button-active-bg !default;
+$multiselect-button-focused-text: $button-active-text !default;
+$multiselect-button-focused-border: $button-active-border !default;
+$multiselect-button-focused-gradient: $button-active-gradient !default;
+$multiselect-button-focused-shadow: $button-active-shadow !default;
+
+
+// Tokens
+// TODO: remove once we use chips
+$multiselect-token-bg: $chip-filled-bg !default;
+$multiselect-token-text: $chip-filled-text !default;
+$multiselect-token-border: $chip-filled-border !default;
+
+$multiselect-token-hover-bg: $chip-filled-hovered-bg !default;
+$multiselect-token-hover-text: null !default;
+$multiselect-token-hover-border: null !default;
+
+$multiselect-token-focus-bg: $chip-filled-focused-bg !default;
+$multiselect-token-focus-text: null !default;
+$multiselect-token-focus-border: null !default;
+
+$multiselect-token-selected-bg: $chip-filled-selected-bg !default;
+$multiselect-token-selected-text: null !default;
+$multiselect-token-selected-border: null !default;
+
+$multiselect-remove-token-text: $subtle-text !default;
+$multiselect-remove-token-hover-text: $body-text !default;

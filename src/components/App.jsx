@@ -3,6 +3,7 @@ import Table from "../components/Table";
 import StackChart from "../components/StackChart";
 import PieChart from "../components/PieChart";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 function App() {
     return (
@@ -11,14 +12,15 @@ function App() {
         <NavBar />
 
         <div class = 'flex-container'>
-
-        <StackChart />
-        <PieChart />
-
+            <StackChart />
+            <PieChart />
         </div>
+        
         <div class = 'table-container '>
-        <Table />
+            <Table />
         </div>
+
+        <Footer />
 
     </div>
     )

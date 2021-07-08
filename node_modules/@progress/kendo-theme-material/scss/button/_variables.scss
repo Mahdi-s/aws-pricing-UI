@@ -1,0 +1,132 @@
+// Button
+
+/// Width of border around buttons
+/// @group buttons
+$button-border-width: 0px !default;
+/// Border radius of buttons
+/// @group buttons
+$button-border-radius: $border-radius !default;
+
+/// Horizontal padding of buttons
+/// @group buttons
+$button-padding-x: $padding-x !default;
+/// Vertical padding of buttons
+/// @group buttons
+$button-padding-y: 8px !default;
+$button-font-family: $font-family !default;
+$button-font-size: $font-size !default;
+$button-line-height: (20 / 14) !default;
+
+$button-padding-x-sm: $button-padding-x / 2 !default;
+$button-padding-y-sm: $button-padding-y / 2 !default;
+$button-line-height-sm: (20 / 14) !default;
+
+$button-calc-size: calc( #{$button-line-height * 1em} + #{$button-padding-y * 2} + #{$button-border-width * 2} ) !default;
+$button-inner-calc-size: calc( #{$button-line-height * 1em} + #{$button-padding-y * 2} ) !default;
+
+/// The background of the buttons.
+/// @group buttons
+$button-bg: $base-bg !default;
+/// The text color of the buttons.
+/// @group buttons
+$button-text: $base-text !default;
+/// The border color of the buttons.
+/// @group buttons
+$button-border: $button-bg !default;
+/// The background gradient of the buttons.
+/// @group buttons
+$button-gradient: null !default;
+$button-shadow: $box-shadow-depth-2 !default;
+
+/// The background of hovered buttons.
+/// @group buttons
+$button-hovered-bg: null !default;
+/// The text color of hovered buttons.
+/// @group buttons
+$button-hovered-text: null !default;
+/// The border color of hovered buttons.
+/// @group buttons
+$button-hovered-border: null !default;
+/// The background gradient of hovered buttons.
+/// @group buttons
+$button-hovered-gradient: null !default;
+$button-hovered-shadow: null !default;
+
+/// The background color of active buttons.
+/// @group buttons
+$button-active-bg: null !default;
+/// The text color of active buttons.
+/// @group buttons
+$button-active-text: null !default;
+/// The border color of active buttons.
+/// @group buttons
+$button-active-border: null !default;
+/// The background gradient of active buttons.
+/// @group buttons
+$button-active-gradient: null !default;
+$button-active-shadow: $box-shadow-depth-3 !default;
+
+/// The background color of selected buttons.
+/// @group buttons
+$button-selected-bg: $button-active-bg !default;
+/// The text color of selected buttons.
+/// @group buttons
+$button-selected-text: $button-active-text !default;
+/// The border color of selected buttons.
+/// @group buttons
+$button-selected-border: $button-active-bg !default;
+/// The background gradient of selected buttons.
+/// @group buttons
+$button-selected-gradient: null !default;
+$button-selected-shadow: null !default;
+
+/// The shadow of focused buttons.
+/// @group buttons
+$button-focused-shadow: null !default;
+
+
+// Disabled button
+$button-disabled-bg: mix( black, white, 12 ) !default;
+$button-disabled-text: rgba(0, 0, 0, .38) !default;
+$button-disabled-border: null !default;
+$button-disabled-gradient: null !default;
+$button-disabled-shadow: none !default;
+
+
+// Primary button
+$primary-button-bg: $primary !default;
+$primary-button-text: contrast-wcag( $primary-button-bg ) !default;
+$primary-button-border: $primary-button-bg !default;
+$primary-button-gradient: null !default;
+$primary-button-shadow: null !default;
+
+$primary-button-hovered-bg: null !default;
+$primary-button-hovered-text: null !default;
+$primary-button-hovered-border: null !default;
+$primary-button-hovered-gradient: null !default;
+$primary-button-hovered-shadow: null !default;
+
+$primary-button-active-bg: null !default;
+$primary-button-active-text: null !default;
+$primary-button-active-border: null !default;
+$primary-button-active-gradient: null !default;
+$primary-button-active-shadow: null !default;
+
+$primary-button-selected-bg: $primary-button-active-bg !default;
+$primary-button-selected-text: $primary-button-active-text !default;
+$primary-button-selected-border: $primary-button-active-gradient !default;
+$primary-button-selected-gradient: null !default;
+$primary-button-selected-shadow: null !default;
+
+$primary-button-focused-shadow: null !default;
+
+$button-group-focus-shadow: null !default;
+
+$flat-button-hover-opacity: .08 !default;
+$flat-button-focus-opacity: .12 !default;
+$flat-button-active-opacity: .16 !default;
+$flat-button-selected-opacity: .22 !default;
+
+$clear-button-text: rgba(0, 0, 0, .67) !default;
+$clear-button-hover-text: rgba(0, 0, 0, .87) !default;
+$clear-button-focused-opacity: .155 !default; // equal to 10% of black
