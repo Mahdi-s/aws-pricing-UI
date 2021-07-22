@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 //import "./App.css";
-import StackedBarChart from "../../src/StackedBarChart";
+import StackedBarChart from "./StackedBarChart";
 
 const data = [
     {
@@ -49,7 +49,7 @@ function StackChart() {
     return (
     <div class='flex-child stack-container border'>
       <React.Fragment>
-        <h2>Stacked Bar Chart Sample </h2>
+        <h2>Stacked Bar Chart Sample</h2>
         <StackedBarChart data={data} keys={keys} colors={colors} />
   
         <div className="fields">

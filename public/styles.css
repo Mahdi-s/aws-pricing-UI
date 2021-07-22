@@ -44,6 +44,7 @@ footer {
   bottom: 50;
   width: 100%;
   height: 20;
+  
 }
 
 footer p {
@@ -87,10 +88,6 @@ svg rect.selection {
   stroke: none;
 }
 
-
-
-
-
 video {
   position: fixed;
   bottom: 0;
@@ -108,3 +105,6 @@ video {
 .field input {
   margin-right: 0.5em;
 }
+
+
+  

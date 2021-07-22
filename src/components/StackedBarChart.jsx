@@ -9,7 +9,7 @@ import {
   axisLeft,
   stackOrderAscending
 } from "d3";
-import useResizeObserver from "./useResizeObserver";
+import useResizeObserver from "../useResizeObserver";
 
 /**
  * Component that renders a StackedBarChart
